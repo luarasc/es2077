@@ -39,7 +39,7 @@ $ touch bsconfig.json
 * rescript build -w : watch mode
 * rescript clean : limpa arquivos gerados
 
-**Conseito** 
+**Conceito** 
 *Integração Vertical*
 <p>
 Nao tem "lock" com uma ferramenta de bundle.
