@@ -1,0 +1,13 @@
+rescript = 1
+rule astj
+  command = /home/raul-emprel/es2077/rescript-vanilla/node_modules/rescript/linux/bsc.exe  -bs-v 9.1.4  -absname -bs-ast -o $out $i
+o src/App.ast : astj ../../src/App.res
+rule deps
+  command = /home/raul-emprel/es2077/rescript-vanilla/node_modules/rescript/linux/bsb_helper.exe -hash 3222f42abd73215b0bf5b80a2900245f $in
+  restat = 1
+o src/App.d : deps src/App.ast
+rule mij
+  command = /home/raul-emprel/es2077/rescript-vanilla/node_modules/rescript/linux/bsc.exe -I src   -bs-package-name rescript-vanilla -bs-package-output commonjs:$in_d:.bs.js $i
+  dyndep = 1
+  restat = 1
+o src/App.cmj src/App.cmi ../../src/App.bs.js : mij src/App.ast

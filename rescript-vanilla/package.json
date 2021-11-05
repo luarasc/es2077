@@ -1,0 +1,18 @@
+{
+  "name": "es2077",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "rescript:build": "rescript",
+    "rescript:start": "rescript build -w",
+    "rescript:clean": "rescript clean"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "rescript": "^9.1.4"
+  }
+}
